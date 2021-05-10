@@ -1,0 +1,6 @@
+language: swift # or objective-c
+osx_image: xcode12
+script:
+  - xcodebuild -scheme Onecalios -workspace onecalios/Onecalios.xcworkspace -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 6S,OS=12.1' build test
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t adaeb29b-cb7b-4842-b1ad-5652571ce76e

@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F3065AB1A63F6B2CD4CC649 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */; };
+		BA031D67264956BA0024A21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D66264956BA0024A21D /* AppDelegate.swift */; };
+		BA031D69264956BA0024A21D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D68264956BA0024A21D /* SceneDelegate.swift */; };
+		BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D6A264956BA0024A21D /* DayEventListViewController.swift */; };
+		BA031D6E264956BA0024A21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA031D6C264956BA0024A21D /* Main.storyboard */; };
+		BA031D70264956BB0024A21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA031D6F264956BB0024A21D /* Assets.xcassets */; };
+		BA031D73264956BB0024A21D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA031D71264956BB0024A21D /* LaunchScreen.storyboard */; };
+		BA031D7E264956BB0024A21D /* OnecaliosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D7D264956BB0024A21D /* OnecaliosTests.swift */; };
+		BA031D89264956BB0024A21D /* OnecaliosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D88264956BB0024A21D /* OnecaliosUITests.swift */; };
+		BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D96264A035E0024A21D /* DayEventListReactor.swift */; };
+		BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */; };
+		EBE4FFF7FA6094E3A774DA7C /* Pods_Onecalios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BA031D7A264956BB0024A21D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA031D5B264956BA0024A21D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA031D62264956BA0024A21D;
+			remoteInfo = onecalios;
+		};
+		BA031D85264956BB0024A21D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BA031D5B264956BA0024A21D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA031D62264956BA0024A21D;
+			remoteInfo = onecalios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios_OnecaliosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		371B318598D7BC5A0C59E612 /* Pods-onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios.debug.xcconfig"; path = "Target Support Files/Pods-onecalios/Pods-onecalios.debug.xcconfig"; sourceTree = "<group>"; };
+		447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
+		796554494DE511063FA31168 /* Pods-onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios.release.xcconfig"; path = "Target Support Files/Pods-onecalios/Pods-onecalios.release.xcconfig"; sourceTree = "<group>"; };
+		7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.release.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.release.xcconfig"; sourceTree = "<group>"; };
+		804ECCB379FF6127462A2E97 /* Pods-onecalios-onecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios-onecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-onecalios-onecaliosTests/Pods-onecalios-onecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
+		9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BA031D63264956BA0024A21D /* Onecalios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onecalios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA031D66264956BA0024A21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BA031D68264956BA0024A21D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BA031D6A264956BA0024A21D /* DayEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListViewController.swift; sourceTree = "<group>"; };
+		BA031D6D264956BA0024A21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BA031D6F264956BB0024A21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BA031D72264956BB0024A21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BA031D74264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA031D79264956BB0024A21D /* OnecaliosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnecaliosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA031D7D264956BB0024A21D /* OnecaliosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnecaliosTests.swift; sourceTree = "<group>"; };
+		BA031D7F264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA031D84264956BB0024A21D /* OnecaliosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnecaliosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA031D88264956BB0024A21D /* OnecaliosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnecaliosUITests.swift; sourceTree = "<group>"; };
+		BA031D8A264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA031D96264A035E0024A21D /* DayEventListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListReactor.swift; sourceTree = "<group>"; };
+		BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.debug.xcconfig"; sourceTree = "<group>"; };
+		FEF503C3EC9A96193508E3E5 /* Pods-onecalios-onecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios-onecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-onecalios-onecaliosTests/Pods-onecalios-onecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BA031D60264956BA0024A21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBE4FFF7FA6094E3A774DA7C /* Pods_Onecalios.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D76264956BB0024A21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F3065AB1A63F6B2CD4CC649 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D81264956BB0024A21D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		763B05D1C62DA848C8BDB740 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */,
+				17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA031D5A264956BA0024A21D = {
+			isa = PBXGroup;
+			children = (
+				BA031D65264956BA0024A21D /* Onecalios */,
+				BA031D7C264956BB0024A21D /* OnecaliosTests */,
+				BA031D87264956BB0024A21D /* OnecaliosUITests */,
+				BA031D64264956BA0024A21D /* Products */,
+				E1E95895DBD0C36DCEFC5DA8 /* Pods */,
+				763B05D1C62DA848C8BDB740 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BA031D64264956BA0024A21D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BA031D63264956BA0024A21D /* Onecalios.app */,
+				BA031D79264956BB0024A21D /* OnecaliosTests.xctest */,
+				BA031D84264956BB0024A21D /* OnecaliosUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BA031D65264956BA0024A21D /* Onecalios */ = {
+			isa = PBXGroup;
+			children = (
+				BA031D66264956BA0024A21D /* AppDelegate.swift */,
+				BA031D68264956BA0024A21D /* SceneDelegate.swift */,
+				BA031D6A264956BA0024A21D /* DayEventListViewController.swift */,
+				BA031D96264A035E0024A21D /* DayEventListReactor.swift */,
+				BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */,
+				BA031D6C264956BA0024A21D /* Main.storyboard */,
+				BA031D6F264956BB0024A21D /* Assets.xcassets */,
+				BA031D71264956BB0024A21D /* LaunchScreen.storyboard */,
+				BA031D74264956BB0024A21D /* Info.plist */,
+				BA795DEF2665F91E00F55B7E /* Extensions */,
+			);
+			path = Onecalios;
+			sourceTree = "<group>";
+		};
+		BA031D7C264956BB0024A21D /* OnecaliosTests */ = {
+			isa = PBXGroup;
+			children = (
+				BA031D7D264956BB0024A21D /* OnecaliosTests.swift */,
+				BA031D7F264956BB0024A21D /* Info.plist */,
+			);
+			path = OnecaliosTests;
+			sourceTree = "<group>";
+		};
+		BA031D87264956BB0024A21D /* OnecaliosUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BA031D88264956BB0024A21D /* OnecaliosUITests.swift */,
+				BA031D8A264956BB0024A21D /* Info.plist */,
+			);
+			path = OnecaliosUITests;
+			sourceTree = "<group>";
+		};
+		BA795DEF2665F91E00F55B7E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = SOURCE_ROOT;
+		};
+		E1E95895DBD0C36DCEFC5DA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				371B318598D7BC5A0C59E612 /* Pods-onecalios.debug.xcconfig */,
+				796554494DE511063FA31168 /* Pods-onecalios.release.xcconfig */,
+				FEF503C3EC9A96193508E3E5 /* Pods-onecalios-onecaliosTests.debug.xcconfig */,
+				804ECCB379FF6127462A2E97 /* Pods-onecalios-onecaliosTests.release.xcconfig */,
+				D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */,
+				7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */,
+				9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */,
+				447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BA031D62264956BA0024A21D /* Onecalios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA031D8D264956BB0024A21D /* Build configuration list for PBXNativeTarget "Onecalios" */;
+			buildPhases = (
+				705FF5C90787D312BF730384 /* [CP] Check Pods Manifest.lock */,
+				BA031D5F264956BA0024A21D /* Sources */,
+				BA031D60264956BA0024A21D /* Frameworks */,
+				BA031D61264956BA0024A21D /* Resources */,
+				93E460434FAAE7F4897C18C3 /* [CP] Embed Pods Frameworks */,
+				BA63D07B2662393A0064F04F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Onecalios;
+			productName = onecalios;
+			productReference = BA031D63264956BA0024A21D /* Onecalios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BA031D78264956BB0024A21D /* OnecaliosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA031D90264956BB0024A21D /* Build configuration list for PBXNativeTarget "OnecaliosTests" */;
+			buildPhases = (
+				AEE02CF7FE991A4DFD15982D /* [CP] Check Pods Manifest.lock */,
+				BA031D75264956BB0024A21D /* Sources */,
+				BA031D76264956BB0024A21D /* Frameworks */,
+				BA031D77264956BB0024A21D /* Resources */,
+				ECAC58D6650C70B7D785AB7C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA031D7B264956BB0024A21D /* PBXTargetDependency */,
+			);
+			name = OnecaliosTests;
+			productName = onecaliosTests;
+			productReference = BA031D79264956BB0024A21D /* OnecaliosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BA031D83264956BB0024A21D /* OnecaliosUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BA031D93264956BB0024A21D /* Build configuration list for PBXNativeTarget "OnecaliosUITests" */;
+			buildPhases = (
+				BA031D80264956BB0024A21D /* Sources */,
+				BA031D81264956BB0024A21D /* Frameworks */,
+				BA031D82264956BB0024A21D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA031D86264956BB0024A21D /* PBXTargetDependency */,
+			);
+			name = OnecaliosUITests;
+			productName = onecaliosUITests;
+			productReference = BA031D84264956BB0024A21D /* OnecaliosUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BA031D5B264956BA0024A21D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					BA031D62264956BA0024A21D = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					BA031D78264956BB0024A21D = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = BA031D62264956BA0024A21D;
+					};
+					BA031D83264956BB0024A21D = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = BA031D62264956BA0024A21D;
+					};
+				};
+			};
+			buildConfigurationList = BA031D5E264956BA0024A21D /* Build configuration list for PBXProject "Onecalios" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BA031D5A264956BA0024A21D;
+			productRefGroup = BA031D64264956BA0024A21D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BA031D62264956BA0024A21D /* Onecalios */,
+				BA031D78264956BB0024A21D /* OnecaliosTests */,
+				BA031D83264956BB0024A21D /* OnecaliosUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BA031D61264956BA0024A21D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA031D73264956BB0024A21D /* LaunchScreen.storyboard in Resources */,
+				BA031D70264956BB0024A21D /* Assets.xcassets in Resources */,
+				BA031D6E264956BA0024A21D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D77264956BB0024A21D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D82264956BB0024A21D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		705FF5C90787D312BF730384 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Onecalios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93E460434FAAE7F4897C18C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onecalios/Pods-Onecalios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onecalios/Pods-Onecalios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onecalios/Pods-Onecalios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEE02CF7FE991A4DFD15982D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Onecalios-OnecaliosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA63D07B2662393A0064F04F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f ~/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
+		};
+		ECAC58D6650C70B7D785AB7C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BA031D5F264956BA0024A21D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */,
+				BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */,
+				BA031D67264956BA0024A21D /* AppDelegate.swift in Sources */,
+				BA031D69264956BA0024A21D /* SceneDelegate.swift in Sources */,
+				BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D75264956BB0024A21D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA031D7E264956BB0024A21D /* OnecaliosTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA031D80264956BB0024A21D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA031D89264956BB0024A21D /* OnecaliosUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BA031D7B264956BB0024A21D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA031D62264956BA0024A21D /* Onecalios */;
+			targetProxy = BA031D7A264956BB0024A21D /* PBXContainerItemProxy */;
+		};
+		BA031D86264956BB0024A21D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BA031D62264956BA0024A21D /* Onecalios */;
+			targetProxy = BA031D85264956BB0024A21D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BA031D6C264956BA0024A21D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA031D6D264956BA0024A21D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BA031D71264956BB0024A21D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BA031D72264956BB0024A21D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BA031D8B264956BB0024A21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BA031D8C264956BB0024A21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BA031D8E264956BB0024A21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecalios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecalios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BA031D8F264956BB0024A21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecalios/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecalios;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BA031D91264956BB0024A21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecaliosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecaliosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Onecalios.app/Onecalios";
+			};
+			name = Debug;
+		};
+		BA031D92264956BB0024A21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecaliosTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecaliosTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Onecalios.app/Onecalios";
+			};
+			name = Release;
+		};
+		BA031D94264956BB0024A21D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecaliosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecaliosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = onecalios;
+			};
+			name = Debug;
+		};
+		BA031D95264956BB0024A21D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = onecaliosUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecaliosUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = onecalios;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BA031D5E264956BA0024A21D /* Build configuration list for PBXProject "Onecalios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA031D8B264956BB0024A21D /* Debug */,
+				BA031D8C264956BB0024A21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA031D8D264956BB0024A21D /* Build configuration list for PBXNativeTarget "Onecalios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA031D8E264956BB0024A21D /* Debug */,
+				BA031D8F264956BB0024A21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA031D90264956BB0024A21D /* Build configuration list for PBXNativeTarget "OnecaliosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA031D91264956BB0024A21D /* Debug */,
+				BA031D92264956BB0024A21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BA031D93264956BB0024A21D /* Build configuration list for PBXNativeTarget "OnecaliosUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA031D94264956BB0024A21D /* Debug */,
+				BA031D95264956BB0024A21D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BA031D5B264956BA0024A21D /* Project object */;
+}
