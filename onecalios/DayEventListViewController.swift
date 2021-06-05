@@ -10,121 +10,195 @@ import RxSwift
 import ReactorKit
 import RxViewController
 import RxLifeCycle
+import EventKitUI
+import RxAlamofire
 
 class DayEventListViewController: UIViewController, StoryboardView {
-  var disposeBag = DisposeBag()
+    var disposeBag = DisposeBag()
+    let eventEditVC = EKEventEditViewController()
 
-  @IBOutlet weak var tableView: UITableView!
-  @IBOutlet weak var refreshEventsButton: UIButton!
-  var activityIndicator = UIActivityIndicatorView()
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var refreshEventsButton: UIButton!
+    var activityIndicator = UIActivityIndicatorView()
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view.
-    self.view.backgroundColor = .systemPink
-    title = "💳 Calendar"
-    setupActivityIndicator()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        self.view.backgroundColor = .systemPink
+        title = "💳 Calendar"
+        setupActivityIndicator()
+    }
+    
+    private func showEventVC(forEvent event: EKEvent) {
+        eventEditVC.eventStore = CalendarManager.shared.eventStore
+        eventEditVC.event = event
+        eventEditVC.editViewDelegate = self
+        
+        self.navigationController?.present(eventEditVC, animated: true, completion: { 
+            //code
+        })
+    }
 
-  private func setupActivityIndicator() {
-    activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-    activityIndicator.style = .gray
-    let rightItem = UIBarButtonItem(customView: activityIndicator)
-    self.navigationItem.leftBarButtonItem = rightItem
-  }
+    private func setupActivityIndicator() {
+        activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        activityIndicator.style = .gray
+        let rightItem = UIBarButtonItem(customView: activityIndicator)
+        self.navigationItem.leftBarButtonItem = rightItem
+    }
 
-  func bind(reactor: DayEventListReactor) {
-    setupLifeCycle(reactor)
-    setupTapHandling(reactor)
-    setupLoading(reactor)
-    setupCalendarAccessGrant(reactor)
+    func bind(reactor: DayEventListReactor) {
+        setupLifeCycle(reactor)
+        setupTapHandling(reactor)
+        setupLoading(reactor)
+        setupCalendarAccessGrant(reactor)
+        setupEventEditHandling(reactor)
 
-    reactor.state
-      .map { $0.events }
-      .distinctUntilChanged()
-      .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
-      .bind(to: tableView.rx.items(cellIdentifier: "EventCell")) { _, element, cell in
-        cell.textLabel?.text = element.title
-        cell.detailTextLabel?.text = String(describing: element.startDate)
-      }
-      .disposed(by: disposeBag)
+        reactor.state
+            .map { $0.events }
+            .distinctUntilChanged()
+            .debounce(.milliseconds(200), scheduler: MainScheduler.instance)
+            .bind(to: tableView.rx.items(cellIdentifier: "EventCell")) { _, element, cell in
+                cell.textLabel?.text = element.title
+                if let start = element.startDate {
+                    cell.detailTextLabel?.text = start.description
+                }
+                if let end = element.endDate {
+                    cell.detailTextLabel?.text?.append(" ~ ")
+                    cell.detailTextLabel?.text?.append(end.description)
+                }
+            }
+            .disposed(by: disposeBag)
 
-    reactor.state
-      .map { $0.error }
-      .subscribe { [unowned self] event in
-        guard let error = event.element else { return }
-        if error {
-          let alert = UIAlertController(
-            title: "Information",
-            message: "There's no event today...oops!",
-            preferredStyle: .alert
-          )
-          alert.addAction(
-            UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-          )
+        reactor.state
+            .map { $0.error }
+            .subscribe { [unowned self] event in
+                guard let error = event.element else { return }
+                if error {
+                    let alert = UIAlertController(
+                        title: "Information",
+                        message: "There's no event today...oops!",
+                        preferredStyle: .alert
+                    )
+                    alert.addAction(
+                        UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+                    )
 
-          self.present(alert, animated: true, completion: nil)
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+            .disposed(by: disposeBag)
+    }
+
+    private func setupLifeCycle(_ reactor: DayEventListReactor) {
+        self.rx.viewDidAppear
+            .debug()
+            .map { _ in Reactor.Action.refreshEventsButtonTapped }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        self.rx.viewDidAppear.map { _ in Reactor.Action.checkAuthorizationStatus }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        UIApplication.shared
+            .rxLifeCycle.didBecomeActive
+            .debug()
+            .map { _ in Reactor.Action.refreshEventsButtonTapped }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+
+    private func setupTapHandling(_ reactor: DayEventListReactor) {
+        refreshEventsButton.rx.tap
+            .map { Reactor.Action.refreshEventsButtonTapped }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        /* OK */
+        tableView.rx.itemSelected
+            .subscribe(onNext: { selectedRowIndexPath in 
+                DispatchQueue.main.after(1) {
+                    self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
+                }
+                if let stateEvents = self.reactor?.currentState.events {
+                    self.showEventVC(forEvent: stateEvents[selectedRowIndexPath.row])
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupLoading(_ reactor: DayEventListReactor) {
+        reactor.state.map { $0.load }
+            .bind(to: activityIndicator.rx.isAnimating)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .map { !$0.load }
+            .bind(to: activityIndicator.rx.isHidden)
+            .disposed(by: disposeBag)
+    }
+
+    private func setupCalendarAccessGrant(_ reactor: DayEventListReactor) {
+        reactor.state
+            .take(1)
+            .map { !$0.isAuthorized }
+            .map { _ in Reactor.Action.requestAuthorization }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+
+        reactor.state
+            .take(1)
+            .distinctUntilChanged { $0.isAuthorized }
+            .map { _ in Reactor.Action.refreshEventsButtonTapped }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    private func setupEventEditHandling(_ reactor: DayEventListReactor) {
+        /* 
+         Try this but failed with error of
+         2021-06-05 15:37:22.741943+0900 Onecalios[16640:379162] RxCocoa/DelegateProxyType.swift:202: Assertion failed
+         eventVC.rx.myEventEditViewDelegate.asObservable()
+         .bind { _ in }
+         .disposed(by: disposeBag)
+         */
+        eventEditVC.rx.viewWillDisappear.asObservable()
+            .debug("Event edit view dismissed")
+            .map { _ in Reactor.Action.refreshEventsButtonTapped }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        eventEditVC.rx.viewWillAppear.asObservable()
+            .debug("Event edit view appear")
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] _ in
+                if let eventTableVC = self?.eventEditVC.viewControllers.first as? UITableViewController,
+                   let eventTable = eventTableVC.tableView {
+                    let top = CGPoint(x: 0, y: -eventTable.contentInset.top)
+                    eventTable.setContentOffset(top, animated: false)
+                    print("Maybe scroll to top or not...")
+                }
+            })
+            .disposed(by: disposeBag)
+    }
+}
+
+extension DayEventListViewController: EKEventEditViewDelegate {
+    func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        switch action {
+        case .canceled:
+            print("event edit canceled...")
+        case .deleted:
+            print("event deleted...")
+        case .saved:
+            print("event saved...")
+        case .cancelled:
+            print("event cancelled...")
+        @unknown default:
+            fatalError("Fatal Error for event edit view action")
         }
-      }
-      .disposed(by: disposeBag)
-  }
-
-  private func setupLifeCycle(_ reactor: DayEventListReactor) {
-    self.rx.viewDidAppear
-      .debug()
-      .map { _ in Reactor.Action.refreshEventsButtonTapped }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-
-    self.rx.viewDidAppear.map { _ in Reactor.Action.checkAuthorizationStatus }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-
-    UIApplication.shared
-      .rxLifeCycle.didBecomeActive
-      .debug()
-      .map { _ in Reactor.Action.refreshEventsButtonTapped }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-  }
-
-  private func setupTapHandling(_ reactor: DayEventListReactor) {
-    refreshEventsButton.rx.tap
-      .map { Reactor.Action.refreshEventsButtonTapped }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-
-    tableView.rx.itemSelected
-      .subscribe { selectedRowIndexPath in
-        self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
-      }
-      .disposed(by: disposeBag)
-  }
-
-  private func setupLoading(_ reactor: DayEventListReactor) {
-    reactor.state.map { $0.load }
-      .bind(to: activityIndicator.rx.isAnimating)
-      .disposed(by: disposeBag)
-
-    reactor.state
-      .map { !$0.load }
-      .bind(to: activityIndicator.rx.isHidden)
-      .disposed(by: disposeBag)
-  }
-
-  private func setupCalendarAccessGrant(_ reactor: DayEventListReactor) {
-    reactor.state
-      .take(1)
-      .map { !$0.isAuthorized }
-      .map { _ in Reactor.Action.requestAuthorization }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-
-    reactor.state
-      .take(1)
-      .distinctUntilChanged { $0.isAuthorized }
-      .map { _ in Reactor.Action.refreshEventsButtonTapped }
-      .bind(to: reactor.action)
-      .disposed(by: disposeBag)
-  }
+        controller.dismiss(animated: true) { 
+            //code
+        }
+    }
 }
