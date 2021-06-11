@@ -168,15 +168,32 @@ class DayEventListViewController: UIViewController, StoryboardView {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        eventEditVC.rx.viewWillAppear.asObservable()
+        eventEditVC.rx.viewDidAppear.asObservable()
             .debug("Event edit view appear")
             .observe(on: MainScheduler.instance)
             .subscribe(onNext: { [weak self] _ in
                 if let eventTableVC = self?.eventEditVC.viewControllers.first as? UITableViewController,
                    let eventTable = eventTableVC.tableView {
-                    let top = CGPoint(x: 0, y: -eventTable.contentInset.top)
-                    eventTable.setContentOffset(top, animated: false)
-                    print("Maybe scroll to top or not...")
+                    //let top = CGPoint(x: 0, y: -eventTable.contentInset.top)
+                    //eventTable.setContentOffset(top, animated: false)
+                    eventTable.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableView.ScrollPosition.top, animated: false)
+                    if let titleCell = eventTable.cellForRow(at: IndexPath(row: 0, section: 0)) {
+                        // TOOD: (2020.06.12) this should be moved into settings...!
+                        if let title = (titleCell.contentView.subviews.first as? UITextField)?.text, 
+                           title.hasPrefix("이동:") { 
+                            return 
+                        }
+                        if let locationCell = eventTable.cellForRow(at: IndexPath(row: 1, section: 0)),
+                           let title = locationCell.textLabel?.text,
+                           let cellTitle = locationCell.description.components(separatedBy: "text = ")[1].components(separatedBy: ";").first,
+                           cellTitle.contains(title) {
+                            guard let indexPath = self?.tableView.indexPathForSelectedRow else { return }
+                            guard let currentEvent = self?.reactor?.currentState.events[indexPath.row] else { return }
+                            // TODO: (2021.06.12) Using currentEvent.structuredLocation for inserting current location forcefully
+                            // currentEvent.location = CLLocationManager
+                            locationCell.textLabel?.text = "메롱";
+                        }
+                    }
                 }
             })
             .disposed(by: disposeBag)
