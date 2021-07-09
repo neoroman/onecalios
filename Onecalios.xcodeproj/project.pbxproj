@@ -7,20 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5F3065AB1A63F6B2CD4CC649 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */; };
-		BA031D67264956BA0024A21D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D66264956BA0024A21D /* AppDelegate.swift */; };
-		BA031D69264956BA0024A21D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D68264956BA0024A21D /* SceneDelegate.swift */; };
+		12136C1543F5C8450B9D2720 /* Pods_Onecalios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */; };
+		3A45DC4A882AB2EF0C0B8C96 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */; };
 		BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D6A264956BA0024A21D /* DayEventListViewController.swift */; };
-		BA031D6E264956BA0024A21D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA031D6C264956BA0024A21D /* Main.storyboard */; };
 		BA031D70264956BB0024A21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA031D6F264956BB0024A21D /* Assets.xcassets */; };
-		BA031D73264956BB0024A21D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA031D71264956BB0024A21D /* LaunchScreen.storyboard */; };
 		BA031D7E264956BB0024A21D /* OnecaliosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D7D264956BB0024A21D /* OnecaliosTests.swift */; };
 		BA031D89264956BB0024A21D /* OnecaliosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D88264956BB0024A21D /* OnecaliosUITests.swift */; };
 		BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D96264A035E0024A21D /* DayEventListReactor.swift */; };
+		BA272EDF2697ED5E0062D9A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA272EDE2697ED5E0062D9A3 /* Preview Assets.xcassets */; };
+		BA272EE22697EE130062D9A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA272EE02697EE130062D9A3 /* ContentView.swift */; };
+		BA272EE32697EE130062D9A3 /* OnecaliosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */; };
+		BA3423F9269805DF00BC5A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3423F7269805DF00BC5A3A /* Main.storyboard */; };
+		BA3423FB2698062C00BC5A3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3423FA2698062C00BC5A3A /* SceneDelegate.swift */; };
 		BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */; };
 		BAFC29C5266B2D03001C9E5A /* DispatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC29C4266B2D03001C9E5A /* DispatchExtension.swift */; };
 		BAFC29C7266B4F9D001C9E5A /* EKEventUI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC29C6266B4F9C001C9E5A /* EKEventUI+Rx.swift */; };
-		EBE4FFF7FA6094E3A774DA7C /* Pods_Onecalios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,20 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios_OnecaliosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		371B318598D7BC5A0C59E612 /* Pods-onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios.debug.xcconfig"; path = "Target Support Files/Pods-onecalios/Pods-onecalios.debug.xcconfig"; sourceTree = "<group>"; };
-		447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
-		796554494DE511063FA31168 /* Pods-onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios.release.xcconfig"; path = "Target Support Files/Pods-onecalios/Pods-onecalios.release.xcconfig"; sourceTree = "<group>"; };
-		7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.release.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.release.xcconfig"; sourceTree = "<group>"; };
-		804ECCB379FF6127462A2E97 /* Pods-onecalios-onecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios-onecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-onecalios-onecaliosTests/Pods-onecalios-onecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
-		9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
+		37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA031D63264956BA0024A21D /* Onecalios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onecalios.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA031D66264956BA0024A21D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BA031D68264956BA0024A21D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BA031D6A264956BA0024A21D /* DayEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListViewController.swift; sourceTree = "<group>"; };
-		BA031D6D264956BA0024A21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BA031D6F264956BB0024A21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BA031D72264956BB0024A21D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA031D74264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA031D79264956BB0024A21D /* OnecaliosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnecaliosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA031D7D264956BB0024A21D /* OnecaliosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnecaliosTests.swift; sourceTree = "<group>"; };
@@ -63,12 +56,17 @@
 		BA031D88264956BB0024A21D /* OnecaliosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnecaliosUITests.swift; sourceTree = "<group>"; };
 		BA031D8A264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA031D96264A035E0024A21D /* DayEventListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListReactor.swift; sourceTree = "<group>"; };
+		BA272EDE2697ED5E0062D9A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BA272EE02697EE130062D9A3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = onecalios/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnecaliosApp.swift; path = onecalios/OnecaliosApp.swift; sourceTree = SOURCE_ROOT; };
+		BA3423F8269805DF00BC5A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = onecalios/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
+		BA3423FA2698062C00BC5A3A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = onecalios/SceneDelegate.swift; sourceTree = SOURCE_ROOT; };
 		BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
 		BAFC29C4266B2D03001C9E5A /* DispatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchExtension.swift; sourceTree = "<group>"; };
 		BAFC29C6266B4F9C001C9E5A /* EKEventUI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventUI+Rx.swift"; sourceTree = "<group>"; };
-		BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.debug.xcconfig"; sourceTree = "<group>"; };
-		FEF503C3EC9A96193508E3E5 /* Pods-onecalios-onecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-onecalios-onecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-onecalios-onecaliosTests/Pods-onecalios-onecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.debug.xcconfig"; sourceTree = "<group>"; };
+		F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios_OnecaliosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4969995CA75593F90EE3E62 /* Pods-Onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.release.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE4FFF7FA6094E3A774DA7C /* Pods_Onecalios.framework in Frameworks */,
+				12136C1543F5C8450B9D2720 /* Pods_Onecalios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F3065AB1A63F6B2CD4CC649 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */,
+				3A45DC4A882AB2EF0C0B8C96 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,11 +96,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40768350B8594364A010859D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */,
+				F4969995CA75593F90EE3E62 /* Pods-Onecalios.release.xcconfig */,
+				A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */,
+				0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		763B05D1C62DA848C8BDB740 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB167454AE90DDDA278606C1 /* Pods_Onecalios.framework */,
-				17D18763EA755815E8918DB3 /* Pods_Onecalios_OnecaliosTests.framework */,
+				37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */,
+				F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,8 +123,8 @@
 				BA031D7C264956BB0024A21D /* OnecaliosTests */,
 				BA031D87264956BB0024A21D /* OnecaliosUITests */,
 				BA031D64264956BA0024A21D /* Products */,
-				E1E95895DBD0C36DCEFC5DA8 /* Pods */,
 				763B05D1C62DA848C8BDB740 /* Frameworks */,
+				40768350B8594364A010859D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,15 +141,16 @@
 		BA031D65264956BA0024A21D /* Onecalios */ = {
 			isa = PBXGroup;
 			children = (
-				BA031D66264956BA0024A21D /* AppDelegate.swift */,
-				BA031D68264956BA0024A21D /* SceneDelegate.swift */,
+				BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */,
+				BA3423FA2698062C00BC5A3A /* SceneDelegate.swift */,
+				BA272EE02697EE130062D9A3 /* ContentView.swift */,
 				BA031D6A264956BA0024A21D /* DayEventListViewController.swift */,
 				BA031D96264A035E0024A21D /* DayEventListReactor.swift */,
 				BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */,
-				BA031D6C264956BA0024A21D /* Main.storyboard */,
 				BA031D6F264956BB0024A21D /* Assets.xcassets */,
-				BA031D71264956BB0024A21D /* LaunchScreen.storyboard */,
 				BA031D74264956BB0024A21D /* Info.plist */,
+				BA3423F7269805DF00BC5A3A /* Main.storyboard */,
+				BA272EDD2697ED5E0062D9A3 /* Preview Content */,
 				BA795DEF2665F91E00F55B7E /* Extensions */,
 			);
 			path = Onecalios;
@@ -164,6 +174,15 @@
 			path = OnecaliosUITests;
 			sourceTree = "<group>";
 		};
+		BA272EDD2697ED5E0062D9A3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BA272EDE2697ED5E0062D9A3 /* Preview Assets.xcassets */,
+			);
+			name = "Preview Content";
+			path = "onecalios/Preview Content";
+			sourceTree = SOURCE_ROOT;
+		};
 		BA795DEF2665F91E00F55B7E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,21 +192,6 @@
 			path = Extensions;
 			sourceTree = SOURCE_ROOT;
 		};
-		E1E95895DBD0C36DCEFC5DA8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				371B318598D7BC5A0C59E612 /* Pods-onecalios.debug.xcconfig */,
-				796554494DE511063FA31168 /* Pods-onecalios.release.xcconfig */,
-				FEF503C3EC9A96193508E3E5 /* Pods-onecalios-onecaliosTests.debug.xcconfig */,
-				804ECCB379FF6127462A2E97 /* Pods-onecalios-onecaliosTests.release.xcconfig */,
-				D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */,
-				7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */,
-				9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */,
-				447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -195,12 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA031D8D264956BB0024A21D /* Build configuration list for PBXNativeTarget "Onecalios" */;
 			buildPhases = (
-				705FF5C90787D312BF730384 /* [CP] Check Pods Manifest.lock */,
+				0D58202DD376CB930FBC7C27 /* [CP] Check Pods Manifest.lock */,
 				BA031D5F264956BA0024A21D /* Sources */,
 				BA031D60264956BA0024A21D /* Frameworks */,
 				BA031D61264956BA0024A21D /* Resources */,
-				93E460434FAAE7F4897C18C3 /* [CP] Embed Pods Frameworks */,
 				BA63D07B2662393A0064F04F /* ShellScript */,
+				4C888BA10F36A71624EDB7FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,9 +300,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA031D73264956BB0024A21D /* LaunchScreen.storyboard in Resources */,
+				BA3423F9269805DF00BC5A3A /* Main.storyboard in Resources */,
+				BA272EDF2697ED5E0062D9A3 /* Preview Assets.xcassets in Resources */,
 				BA031D70264956BB0024A21D /* Assets.xcassets in Resources */,
-				BA031D6E264956BA0024A21D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +323,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		705FF5C90787D312BF730384 /* [CP] Check Pods Manifest.lock */ = {
+		0D58202DD376CB930FBC7C27 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,7 +345,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		93E460434FAAE7F4897C18C3 /* [CP] Embed Pods Frameworks */ = {
+		4C888BA10F36A71624EDB7FF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -423,11 +427,12 @@
 			files = (
 				BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */,
 				BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */,
-				BA031D67264956BA0024A21D /* AppDelegate.swift in Sources */,
+				BA272EE22697EE130062D9A3 /* ContentView.swift in Sources */,
 				BAFC29C5266B2D03001C9E5A /* DispatchExtension.swift in Sources */,
-				BA031D69264956BA0024A21D /* SceneDelegate.swift in Sources */,
+				BA272EE32697EE130062D9A3 /* OnecaliosApp.swift in Sources */,
 				BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */,
 				BAFC29C7266B4F9D001C9E5A /* EKEventUI+Rx.swift in Sources */,
+				BA3423FB2698062C00BC5A3A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,20 +468,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		BA031D6C264956BA0024A21D /* Main.storyboard */ = {
+		BA3423F7269805DF00BC5A3A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BA031D6D264956BA0024A21D /* Base */,
+				BA3423F8269805DF00BC5A3A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BA031D71264956BB0024A21D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BA031D72264956BB0024A21D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -533,7 +530,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -588,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -600,17 +597,20 @@
 		};
 		BA031D8E264956BB0024A21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0509781E4DB8383120567D9 /* Pods-Onecalios.debug.xcconfig */;
+			baseConfigurationReference = D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "onecalios/Preview\\ Content";
 				DEVELOPMENT_TEAM = N6EG7RK539;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = onecalios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecalios2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -620,17 +620,20 @@
 		};
 		BA031D8F264956BB0024A21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B8F0BE5D1D847FAA865BDBD /* Pods-Onecalios.release.xcconfig */;
+			baseConfigurationReference = F4969995CA75593F90EE3E62 /* Pods-Onecalios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "onecalios/Preview\\ Content";
 				DEVELOPMENT_TEAM = N6EG7RK539;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = onecalios/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.alterant.onecalios2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -640,7 +643,7 @@
 		};
 		BA031D91264956BB0024A21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F4589D280013232F3B96284 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */;
+			baseConfigurationReference = A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -662,7 +665,7 @@
 		};
 		BA031D92264956BB0024A21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 447B12E8A66D5B7800AB9B0E /* Pods-Onecalios-OnecaliosTests.release.xcconfig */;
+			baseConfigurationReference = 0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

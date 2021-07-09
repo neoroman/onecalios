@@ -35,7 +35,8 @@ extension Reactive where Base: EKEventEditViewController {
     }
     
     var myEventEditViewDelegate: Observable<Bool> {
-        return editViewDelegate.methodInvoked(#selector(EKEventEditViewDelegate.eventEditViewController(_:didCompleteWith:)))
+        return editViewDelegate
+            .methodInvoked(#selector(EKEventEditViewDelegate.eventEditViewController(_:didCompleteWith:)))
             .debug("Success to delegate...!")
             .map { _ in return true }
     }

@@ -7,11 +7,11 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import ReactorKit
 import RxViewController
 import RxLifeCycle
 import EventKitUI
-import RxAlamofire
 
 class DayEventListViewController: UIViewController, StoryboardView {
     var disposeBag = DisposeBag()
@@ -41,7 +41,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
 
     private func setupActivityIndicator() {
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        activityIndicator.style = .gray
+        activityIndicator.style = .medium
         let rightItem = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.leftBarButtonItem = rightItem
     }
@@ -187,9 +187,10 @@ class DayEventListViewController: UIViewController, StoryboardView {
                            let title = locationCell.textLabel?.text,
                            let cellTitle = locationCell.description.components(separatedBy: "text = ")[1].components(separatedBy: ";").first,
                            cellTitle.contains(title) {
-                            guard let indexPath = self?.tableView.indexPathForSelectedRow else { return }
-                            guard let currentEvent = self?.reactor?.currentState.events[indexPath.row] else { return }
                             // TODO: (2021.06.12) Using currentEvent.structuredLocation for inserting current location forcefully
+                            // guard let indexPath = self?.tableView.indexPathForSelectedRow else { return }
+                            // guard let myReactor = self?.reactor else { return }
+                            // let currentEvent = myReactor.currentState.events[indexPath.row]
                             // currentEvent.location = CLLocationManager
                             locationCell.textLabel?.text = "메롱";
                         }

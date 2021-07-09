@@ -3,6 +3,8 @@ platform :ios, '12.1'
 target 'Onecalios' do
   use_frameworks!
 
+  # SwiftUI, iOS 14.0 or later
+
   # Architecture
   pod 'ReactorKit'
 

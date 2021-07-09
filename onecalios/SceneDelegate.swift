@@ -17,7 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let myScene = (scene as? UIWindowScene), let window = myScene.windows.first else { return }
         
-        if let rootNC =  window.rootViewController as? UINavigationController,
+        if let rootNC = window.rootViewController as? UINavigationController,
            let dayVC = rootNC.viewControllers.first as? DayEventListViewController {
             dayVC.reactor = DayEventListReactor()
         }
