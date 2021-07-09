@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		12136C1543F5C8450B9D2720 /* Pods_Onecalios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */; };
-		3A45DC4A882AB2EF0C0B8C96 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */; };
 		BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D6A264956BA0024A21D /* DayEventListViewController.swift */; };
 		BA031D70264956BB0024A21D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA031D6F264956BB0024A21D /* Assets.xcassets */; };
 		BA031D7E264956BB0024A21D /* OnecaliosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D7D264956BB0024A21D /* OnecaliosTests.swift */; };
@@ -42,9 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.release.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.release.xcconfig"; sourceTree = "<group>"; };
 		37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios-OnecaliosTests.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA031D63264956BA0024A21D /* Onecalios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Onecalios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA031D6A264956BA0024A21D /* DayEventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListViewController.swift; sourceTree = "<group>"; };
 		BA031D6F264956BB0024A21D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +62,6 @@
 		BAFC29C4266B2D03001C9E5A /* DispatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchExtension.swift; sourceTree = "<group>"; };
 		BAFC29C6266B4F9C001C9E5A /* EKEventUI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventUI+Rx.swift"; sourceTree = "<group>"; };
 		D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.debug.xcconfig"; sourceTree = "<group>"; };
-		F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Onecalios_OnecaliosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4969995CA75593F90EE3E62 /* Pods-Onecalios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.release.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +78,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A45DC4A882AB2EF0C0B8C96 /* Pods_Onecalios_OnecaliosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +96,6 @@
 			children = (
 				D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */,
 				F4969995CA75593F90EE3E62 /* Pods-Onecalios.release.xcconfig */,
-				A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */,
-				0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -111,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				37DB953F026620EFE8B3092D /* Pods_Onecalios.framework */,
-				F2129441D48666CAA3E2D380 /* Pods_Onecalios_OnecaliosTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -203,7 +195,7 @@
 				BA031D5F264956BA0024A21D /* Sources */,
 				BA031D60264956BA0024A21D /* Frameworks */,
 				BA031D61264956BA0024A21D /* Resources */,
-				BA63D07B2662393A0064F04F /* ShellScript */,
+				BA63D07B2662393A0064F04F /* SwiftLint */,
 				4C888BA10F36A71624EDB7FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
@@ -219,11 +211,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA031D90264956BB0024A21D /* Build configuration list for PBXNativeTarget "OnecaliosTests" */;
 			buildPhases = (
-				AEE02CF7FE991A4DFD15982D /* [CP] Check Pods Manifest.lock */,
 				BA031D75264956BB0024A21D /* Sources */,
 				BA031D76264956BB0024A21D /* Frameworks */,
 				BA031D77264956BB0024A21D /* Resources */,
-				ECAC58D6650C70B7D785AB7C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,29 +352,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onecalios/Pods-Onecalios-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AEE02CF7FE991A4DFD15982D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Onecalios-OnecaliosTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA63D07B2662393A0064F04F /* ShellScript */ = {
+		BA63D07B2662393A0064F04F /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -393,6 +361,7 @@
 			);
 			inputPaths = (
 			);
+			name = SwiftLint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -400,23 +369,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ -f ~/Dropbox/Developer/Lint/com.raywenderlich.swiftlint.yml ]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/Dropbox/Developer/Lint/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
-		};
-		ECAC58D6650C70B7D785AB7C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Onecalios-OnecaliosTests/Pods-Onecalios-OnecaliosTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -643,7 +595,6 @@
 		};
 		BA031D91264956BB0024A21D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9B147C3052E853B62E1CE91 /* Pods-Onecalios-OnecaliosTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -665,7 +616,6 @@
 		};
 		BA031D92264956BB0024A21D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CB057687F842F0B8DC60849 /* Pods-Onecalios-OnecaliosTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

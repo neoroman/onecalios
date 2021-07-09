@@ -35,7 +35,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
         eventEditVC.editViewDelegate = self
         
         self.navigationController?.present(eventEditVC, animated: true, completion: { 
-            //code
+            // code
         })
     }
 
@@ -174,8 +174,8 @@ class DayEventListViewController: UIViewController, StoryboardView {
             .subscribe(onNext: { [weak self] _ in
                 if let eventTableVC = self?.eventEditVC.viewControllers.first as? UITableViewController,
                    let eventTable = eventTableVC.tableView {
-                    //let top = CGPoint(x: 0, y: -eventTable.contentInset.top)
-                    //eventTable.setContentOffset(top, animated: false)
+                    // let top = CGPoint(x: 0, y: -eventTable.contentInset.top)
+                    // eventTable.setContentOffset(top, animated: false)
                     eventTable.scrollToRow(at: IndexPath(row: 0, section: 0), at: UITableView.ScrollPosition.top, animated: false)
                     if let titleCell = eventTable.cellForRow(at: IndexPath(row: 0, section: 0)) {
                         // TOOD: (2020.06.12) this should be moved into settings...!
@@ -192,7 +192,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
                             // guard let myReactor = self?.reactor else { return }
                             // let currentEvent = myReactor.currentState.events[indexPath.row]
                             // currentEvent.location = CLLocationManager
-                            locationCell.textLabel?.text = "메롱";
+                            locationCell.textLabel?.text = "메롱"
                         }
                     }
                 }
@@ -216,7 +216,7 @@ extension DayEventListViewController: EKEventEditViewDelegate {
             fatalError("Fatal Error for event edit view action")
         }
         controller.dismiss(animated: true) { 
-            //code
+            // code
         }
     }
 }
