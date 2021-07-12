@@ -13,14 +13,27 @@ import RxViewController
 import RxLifeCycle
 import EventKitUI
 
-class DayEventListViewController: UIViewController, StoryboardView {
+class DayEventListViewController: UIViewController, StoryboardView {     
     var disposeBag = DisposeBag()
     let eventEditVC = EKEventEditViewController()
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var refreshEventsButton: UIButton!
     var activityIndicator = UIActivityIndicatorView()
-
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+        self.reactor = DayEventListReactor()
+    }   
+    
+    required init?(coder: NSCoder) {
+        // fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        
+        self.reactor = DayEventListReactor()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -38,21 +51,21 @@ class DayEventListViewController: UIViewController, StoryboardView {
             // code
         })
     }
-
+    
     private func setupActivityIndicator() {
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         activityIndicator.style = .medium
         let rightItem = UIBarButtonItem(customView: activityIndicator)
         self.navigationItem.leftBarButtonItem = rightItem
     }
-
+    
     func bind(reactor: DayEventListReactor) {
         setupLifeCycle(reactor)
         setupTapHandling(reactor)
         setupLoading(reactor)
         setupCalendarAccessGrant(reactor)
         setupEventEditHandling(reactor)
-
+        
         reactor.state
             .map { $0.events }
             .distinctUntilChanged()
@@ -68,7 +81,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
                 }
             }
             .disposed(by: disposeBag)
-
+        
         reactor.state
             .map { $0.error }
             .subscribe { [unowned self] event in
@@ -82,38 +95,43 @@ class DayEventListViewController: UIViewController, StoryboardView {
                     alert.addAction(
                         UIAlertAction(title: "Ok", style: .cancel, handler: nil)
                     )
-
+                    
                     self.present(alert, animated: true, completion: nil)
                 }
             }
             .disposed(by: disposeBag)
     }
-
+    
     private func setupLifeCycle(_ reactor: DayEventListReactor) {
         self.rx.viewDidAppear
-            .debug()
             .map { _ in Reactor.Action.refreshEventsButtonTapped }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         self.rx.viewDidAppear.map { _ in Reactor.Action.checkAuthorizationStatus }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         UIApplication.shared
             .rxLifeCycle.didBecomeActive
-            .debug()
             .map { _ in Reactor.Action.refreshEventsButtonTapped }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
+        
+        UIApplication.shared
+            .rxLifeCycle.willResignActive
+            .debug()
+            .map { _ in Reactor.Action.willResignActive }
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
-
+    
     private func setupTapHandling(_ reactor: DayEventListReactor) {
         refreshEventsButton.rx.tap
             .map { Reactor.Action.refreshEventsButtonTapped }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         /* OK */
         tableView.rx.itemSelected
             .subscribe(onNext: { selectedRowIndexPath in 
@@ -131,13 +149,13 @@ class DayEventListViewController: UIViewController, StoryboardView {
         reactor.state.map { $0.load }
             .bind(to: activityIndicator.rx.isAnimating)
             .disposed(by: disposeBag)
-
+        
         reactor.state
             .map { !$0.load }
             .bind(to: activityIndicator.rx.isHidden)
             .disposed(by: disposeBag)
     }
-
+    
     private func setupCalendarAccessGrant(_ reactor: DayEventListReactor) {
         reactor.state
             .take(1)
@@ -145,7 +163,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
             .map { _ in Reactor.Action.requestAuthorization }
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-
+        
         reactor.state
             .take(1)
             .distinctUntilChanged { $0.isAuthorized }
@@ -204,16 +222,16 @@ class DayEventListViewController: UIViewController, StoryboardView {
 extension DayEventListViewController: EKEventEditViewDelegate {
     func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
         switch action {
-        case .canceled:
-            print("event edit canceled...")
-        case .deleted:
-            print("event deleted...")
-        case .saved:
-            print("event saved...")
-        case .cancelled:
-            print("event cancelled...")
-        @unknown default:
-            fatalError("Fatal Error for event edit view action")
+            case .canceled:
+                print("event edit canceled...")
+            case .deleted:
+                print("event deleted...")
+            case .saved:
+                print("event saved...")
+            case .cancelled:
+                print("event cancelled...")
+            @unknown default:
+                fatalError("Fatal Error for event edit view action")
         }
         controller.dismiss(animated: true) { 
             // code
