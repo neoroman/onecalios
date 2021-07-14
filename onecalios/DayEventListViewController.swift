@@ -41,7 +41,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
         title = "💳 Calendar"
         setupActivityIndicator()
     }
-    
+        
     private func showEventVC(forEvent event: EKEvent) {
         eventEditVC.eventStore = CalendarManager.shared.eventStore
         eventEditVC.event = event
@@ -55,8 +55,8 @@ class DayEventListViewController: UIViewController, StoryboardView {
     private func setupActivityIndicator() {
         activityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         activityIndicator.style = .medium
-        let rightItem = UIBarButtonItem(customView: activityIndicator)
-        self.navigationItem.leftBarButtonItem = rightItem
+        let leftItem = UIBarButtonItem(customView: activityIndicator)
+        self.navigationItem.leftBarButtonItem = leftItem
     }
     
     func bind(reactor: DayEventListReactor) {
@@ -88,15 +88,19 @@ class DayEventListViewController: UIViewController, StoryboardView {
                 guard let error = event.element else { return }
                 if error {
                     let alert = UIAlertController(
-                        title: "Information",
+                        title: nil,
                         message: "There's no event today...oops!",
                         preferredStyle: .alert
                     )
-                    alert.addAction(
-                        UIAlertAction(title: "Ok", style: .cancel, handler: nil)
-                    )
-                    
+//                    alert.addAction(
+//                        UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+//                    )
                     self.present(alert, animated: true, completion: nil)
+                    
+                    DispatchQueue.main.asyncAfter(deadline: .now()+1.3, execute: {
+                        alert.dismiss(animated: true, completion: nil)
+                        
+                    })
                 }
             }
             .disposed(by: disposeBag)

@@ -1,6 +1,6 @@
 //
-//  onecalios2App.swift
-//  onecalios2
+//  OnecaliosApp.swift
+//  onecalios
 //
 //  Created by Henry Kim on 2021/07/09.
 //
