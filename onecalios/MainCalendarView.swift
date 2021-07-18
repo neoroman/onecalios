@@ -6,11 +6,23 @@
 //
 
 import SwiftUI
+import UIKit
 
-struct MainCalendarView: View {
-    var body: some View {
-        Text("Hello, neoroman's world!")
-            .padding()
+
+// TODO: (2021.07.18) make this storyboard view into SwiftUI view
+struct MainCalendarView: UIViewControllerRepresentable {
+    typealias UIViewControllerType = DayEventListViewController
+    
+    let story = UIStoryboard.init(name: "Main", bundle: Bundle.main)
+
+    func makeUIViewController(context: Context) -> DayEventListViewController {
+        guard let dayEventList = story.instantiateViewController(withIdentifier: "DayEventListViewController") as? DayEventListViewController  else {
+            return DayEventListViewController()
+        }
+        return dayEventList
+    }
+    func updateUIViewController(_ uiViewController: DayEventListViewController, context: Context) {
+        // code
     }
 }
 
@@ -20,12 +32,12 @@ struct MainCalendarView_Previews: PreviewProvider {
     }
 }
 
-class MainCalendarViewController: UIHostingController<MainCalendarView> {
-    required init?(coder: NSCoder) {
-        super.init(coder: coder, rootView: MainCalendarView())
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-}
+// class MainCalendarViewController: UIHostingController<MainCalendarView> {
+//    required init?(coder: NSCoder) {
+//        super.init(coder: coder, rootView: MainCalendarView())
+//    }
+//    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//    }
+// }

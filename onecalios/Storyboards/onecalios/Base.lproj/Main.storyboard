@@ -68,11 +68,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0mO-PK-2c2">
-                        <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" style="plain" id="Kcq-gI-Sey">
-                            <connections>
-                                <segue destination="4eA-3L-82h" kind="show" id="rOY-c2-Bcp"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" style="plain" id="Kcq-gI-Sey"/>
                     </navigationItem>
                     <connections>
                         <outlet property="refreshEventsButton" destination="gpn-9N-rQr" id="ydR-mg-jH8"/>
@@ -100,22 +96,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0WV-5w-DzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="82.366071428571431"/>
-        </scene>
-        <!--Main Calendar View Controller-->
-        <scene sceneID="UM1-py-Y8o">
-            <objects>
-                <viewController id="4eA-3L-82h" customClass="MainCalendarViewController" customModule="Onecalios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="cmm-YY-5EV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="NF8-WH-nWo"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gbf-3x-RTw"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="660-2K-HeW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1051" y="-616"/>
         </scene>
     </scenes>
     <resources>
