@@ -14,10 +14,18 @@
 		BA031D89264956BB0024A21D /* OnecaliosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D88264956BB0024A21D /* OnecaliosUITests.swift */; };
 		BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA031D96264A035E0024A21D /* DayEventListReactor.swift */; };
 		BA272EDF2697ED5E0062D9A3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA272EDE2697ED5E0062D9A3 /* Preview Assets.xcassets */; };
-		BA272EE22697EE130062D9A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA272EE02697EE130062D9A3 /* ContentView.swift */; };
+		BA272EE22697EE130062D9A3 /* MainCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA272EE02697EE130062D9A3 /* MainCalendarView.swift */; };
 		BA272EE32697EE130062D9A3 /* OnecaliosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */; };
 		BA3423F9269805DF00BC5A3A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3423F7269805DF00BC5A3A /* Main.storyboard */; };
 		BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */; };
+		BABE995026A4096700531483 /* LogoImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE994F26A4096700531483 /* LogoImage.swift */; };
+		BABE995526A40C0600531483 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995226A40C0600531483 /* UserManager.swift */; };
+		BABE995626A40C0600531483 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995326A40C0600531483 /* Profile.swift */; };
+		BABE995726A40C0600531483 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995426A40C0600531483 /* Settings.swift */; };
+		BABE995926A40C3C00531483 /* WelcomeBackgroundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995826A40C3C00531483 /* WelcomeBackgroundImage.swift */; };
+		BABE995B26A40C9D00531483 /* WelcomeMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995A26A40C9D00531483 /* WelcomeMessageView.swift */; };
+		BABE995D26A40CD400531483 /* HorizontallyAlignedLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995C26A40CD400531483 /* HorizontallyAlignedLabelStyle.swift */; };
+		BABE995F26A40D3C00531483 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE995E26A40D3C00531483 /* WelcomeView.swift */; };
 		BAFC29C5266B2D03001C9E5A /* DispatchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC29C4266B2D03001C9E5A /* DispatchExtension.swift */; };
 		BAFC29C7266B4F9D001C9E5A /* EKEventUI+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFC29C6266B4F9C001C9E5A /* EKEventUI+Rx.swift */; };
 /* End PBXBuildFile section */
@@ -53,10 +61,18 @@
 		BA031D8A264956BB0024A21D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA031D96264A035E0024A21D /* DayEventListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEventListReactor.swift; sourceTree = "<group>"; };
 		BA272EDE2697ED5E0062D9A3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		BA272EE02697EE130062D9A3 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = onecalios/ContentView.swift; sourceTree = SOURCE_ROOT; };
+		BA272EE02697EE130062D9A3 /* MainCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainCalendarView.swift; path = onecalios/MainCalendarView.swift; sourceTree = SOURCE_ROOT; };
 		BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OnecaliosApp.swift; path = onecalios/OnecaliosApp.swift; sourceTree = SOURCE_ROOT; };
 		BA3423F8269805DF00BC5A3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = onecalios/Base.lproj/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarManager.swift; sourceTree = "<group>"; };
+		BABE994F26A4096700531483 /* LogoImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoImage.swift; sourceTree = "<group>"; };
+		BABE995226A40C0600531483 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		BABE995326A40C0600531483 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		BABE995426A40C0600531483 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		BABE995826A40C3C00531483 /* WelcomeBackgroundImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeBackgroundImage.swift; sourceTree = "<group>"; };
+		BABE995A26A40C9D00531483 /* WelcomeMessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeMessageView.swift; sourceTree = "<group>"; };
+		BABE995C26A40CD400531483 /* HorizontallyAlignedLabelStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontallyAlignedLabelStyle.swift; sourceTree = "<group>"; };
+		BABE995E26A40D3C00531483 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		BAFC29C4266B2D03001C9E5A /* DispatchExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchExtension.swift; sourceTree = "<group>"; };
 		BAFC29C6266B4F9C001C9E5A /* EKEventUI+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventUI+Rx.swift"; sourceTree = "<group>"; };
 		D1FB1E2794916951DB1E43AB /* Pods-Onecalios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Onecalios.debug.xcconfig"; path = "Target Support Files/Pods-Onecalios/Pods-Onecalios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,10 +148,13 @@
 			isa = PBXGroup;
 			children = (
 				BA272EE12697EE130062D9A3 /* OnecaliosApp.swift */,
-				BA272EE02697EE130062D9A3 /* ContentView.swift */,
+				BABE995E26A40D3C00531483 /* WelcomeView.swift */,
+				BABE995126A40C0600531483 /* Profile */,
+				BABE994E26A4095900531483 /* Components */,
+				BABE996026A40FC300531483 /* Managers */,
+				BA272EE02697EE130062D9A3 /* MainCalendarView.swift */,
 				BA031D6A264956BA0024A21D /* DayEventListViewController.swift */,
 				BA031D96264A035E0024A21D /* DayEventListReactor.swift */,
-				BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */,
 				BA031D6F264956BB0024A21D /* Assets.xcassets */,
 				BA031D74264956BB0024A21D /* Info.plist */,
 				BA3423F7269805DF00BC5A3A /* Main.storyboard */,
@@ -180,6 +199,35 @@
 			);
 			path = Extensions;
 			sourceTree = SOURCE_ROOT;
+		};
+		BABE994E26A4095900531483 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				BABE994F26A4096700531483 /* LogoImage.swift */,
+				BABE995A26A40C9D00531483 /* WelcomeMessageView.swift */,
+				BABE995826A40C3C00531483 /* WelcomeBackgroundImage.swift */,
+				BABE995C26A40CD400531483 /* HorizontallyAlignedLabelStyle.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		BABE995126A40C0600531483 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				BABE995226A40C0600531483 /* UserManager.swift */,
+				BABE995326A40C0600531483 /* Profile.swift */,
+				BABE995426A40C0600531483 /* Settings.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BABE996026A40FC300531483 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				BA6414B8264FBF5E00CC63DF /* CalendarManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -374,12 +422,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABE995526A40C0600531483 /* UserManager.swift in Sources */,
+				BABE995626A40C0600531483 /* Profile.swift in Sources */,
+				BABE995926A40C3C00531483 /* WelcomeBackgroundImage.swift in Sources */,
 				BA031D97264A035E0024A21D /* DayEventListReactor.swift in Sources */,
+				BABE995B26A40C9D00531483 /* WelcomeMessageView.swift in Sources */,
 				BA031D6B264956BA0024A21D /* DayEventListViewController.swift in Sources */,
-				BA272EE22697EE130062D9A3 /* ContentView.swift in Sources */,
+				BA272EE22697EE130062D9A3 /* MainCalendarView.swift in Sources */,
 				BAFC29C5266B2D03001C9E5A /* DispatchExtension.swift in Sources */,
+				BABE995D26A40CD400531483 /* HorizontallyAlignedLabelStyle.swift in Sources */,
 				BA272EE32697EE130062D9A3 /* OnecaliosApp.swift in Sources */,
+				BABE995F26A40D3C00531483 /* WelcomeView.swift in Sources */,
 				BA6414B9264FBF5E00CC63DF /* CalendarManager.swift in Sources */,
+				BABE995026A4096700531483 /* LogoImage.swift in Sources */,
+				BABE995726A40C0600531483 /* Settings.swift in Sources */,
 				BAFC29C7266B4F9D001C9E5A /* EKEventUI+Rx.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
