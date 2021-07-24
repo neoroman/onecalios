@@ -9,12 +9,12 @@ import SwiftUI
 
 struct WelcomeView: View {
     @State private var showingMain = false
-
+    
     var body: some View {
         NavigationView {
             ZStack {
-                WelcomeBackgroundImage()
                 WelcomeMessageView()
+                WelcomeBackgroundImage()
             }
             .navigationBarHidden(true)
             .onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
@@ -31,6 +31,18 @@ struct WelcomeView: View {
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .overlay(alignment: .bottomTrailing) {
+            VStack(alignment: .trailing) {
+                HStack(alignment: .bottom) {
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    FloatingMenu()                    
+                }
+            }            
+            .padding()
+            .zIndex(100)
+        }
     }
     
     func startMain() {
