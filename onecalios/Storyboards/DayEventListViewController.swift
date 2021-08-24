@@ -40,6 +40,9 @@ class DayEventListViewController: UIViewController, StoryboardView {
         self.view.backgroundColor = .systemPink
         title = "💳 Calendar"
         setupActivityIndicator()
+        
+        let aButton = UIBarButtonItem(image: UIImage(systemName: "Person"), style: .plain, target: self, action: #selector(showSettingsVC(_:)))
+        self.navigationItem.rightBarButtonItem = aButton
     }
         
     private func showEventVC(forEvent event: EKEvent) {
@@ -50,6 +53,10 @@ class DayEventListViewController: UIViewController, StoryboardView {
         self.navigationController?.present(eventEditVC, animated: true, completion: { 
             // code
         })
+    }
+    
+    @objc private func showSettingsVC(_ sender: Any) {
+        print("merong");
     }
     
     private func setupActivityIndicator() {
@@ -147,6 +154,7 @@ class DayEventListViewController: UIViewController, StoryboardView {
                 }
             })
             .disposed(by: disposeBag)
+        
     }
     
     private func setupLoading(_ reactor: DayEventListReactor) {
@@ -232,8 +240,6 @@ extension DayEventListViewController: EKEventEditViewDelegate {
                 print("event deleted...")
             case .saved:
                 print("event saved...")
-            case .cancelled:
-                print("event cancelled...")
             @unknown default:
                 fatalError("Fatal Error for event edit view action")
         }

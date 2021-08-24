@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6mM-8D-8y0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6mM-8D-8y0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" textLabel="Scm-Nr-1p8" detailTextLabel="qXo-XV-cIM" style="IBUITableViewCellStyleSubtitle" id="vaL-FT-Eqm">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vaL-FT-Eqm" id="90t-I1-EwZ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -47,7 +47,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpn-9N-rQr">
-                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="858" width="414" height="44"/>
                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="M9d-Pw-goE"/>
@@ -58,7 +58,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gpn-9N-rQr" secondAttribute="bottom" id="4sc-jl-rnw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gpn-9N-rQr" secondAttribute="bottom" constant="-40" id="4sc-jl-rnw"/>
                             <constraint firstItem="gpn-9N-rQr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Wv-6Z-gaf"/>
                             <constraint firstItem="PgV-Bt-Yto" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A0b-Mi-r4g"/>
                             <constraint firstAttribute="bottom" secondItem="PgV-Bt-Yto" secondAttribute="bottom" id="DfN-PB-4WX"/>
@@ -67,9 +67,7 @@
                             <constraint firstItem="PgV-Bt-Yto" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z74-Yi-f7I"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="0mO-PK-2c2">
-                        <barButtonItem key="rightBarButtonItem" image="person.circle.fill" catalog="system" style="plain" id="Kcq-gI-Sey"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="0mO-PK-2c2"/>
                     <connections>
                         <outlet property="refreshEventsButton" destination="gpn-9N-rQr" id="ydR-mg-jH8"/>
                         <outlet property="tableView" destination="PgV-Bt-Yto" id="e4C-dB-aSa"/>
@@ -99,7 +97,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
